@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+Hello from final_html page
+<br/><br/>
+
+The Product {{finallist.product_id}} is available at <br/>
+<img src="{{image_url}}" width="200px" height="200px">
+
+<br/>
+<br/>
+
+{% for i in address_fields %}
+Customer id = {{  i.customer_id }}
+country = {{  i.country }}
+State = {{  i.state }}
+City = {{  i.city }}
+Pin Code = {{  i.pin_code }}
+choices = {{ i.size}}
+latitude = {{ i.latitude }}
+longitude = {{ i.longitude }}
+<br/>
+{{i.map|safe}}
+
+<br/><br/>
+
+{% endfor %}
+
+  </body>
+</html>

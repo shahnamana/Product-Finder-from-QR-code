@@ -1,0 +1,128 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Product finder with QR Code{% endblock %}</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="style1.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .carousel-item h5 {
+      text-align : center;
+      margin-left: auto;
+        margin-right: auto;
+  }
+  .carousel-caption {
+    bottom: 270px;
+    text-align : center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align : center;
+    margin-left: 700px;
+    margin-right: auto;
+  }
+
+  .carousel-caption p {
+    width: 75%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  .navbar-light .navbar-brand {
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+    color: #fff;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    color: #fff;
+  }
+
+  .navbar-toggler {
+    background: #fff;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-link {
+    padding: .2rem 1rem;
+  }
+
+  .nav-link.active,.nav-link:focus{
+    color: #fff;
+  }
+
+  .navbar-toggler {
+    padding: 1px 5px;
+    font-size: 18px;
+    line-height: 0.3;
+  }
+
+  .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+<nav class="navbar navbar-expand-lg fixed-top " style="background-color: #171c24;">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'HomePage' %}"><h2 style="color:white;">Product Finder using QR Code</h2></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto" s>
+  <li class="nav-item active">
+            <a class="nav-link" href="{% url 'HomePage' %}" style="color:white;">Home</a>
+          </li>
+  <li class="nav-item">
+            <a class="nav-link" href="{% url 'AllProducts' %}" style="color:white;">Products</a>
+          </li>
+  </ul>
+  </div>
+  </div>
+  </nav>
+  <main>
+    {% block content %}
+
+    {% endblock %}
+  </main>
+</body>
+</html>
