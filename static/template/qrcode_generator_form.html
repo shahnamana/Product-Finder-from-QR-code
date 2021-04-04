@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hotel_image</title>
+</head>
+<body>
+	<form method="post">
+		{% csrf_token %}
+		Enter the product ID (numbers only): <input type="number" name="productId"></input>
+		<button type="submit">Generate QR code</button>
+</body>
+</html>
